@@ -8,20 +8,20 @@ namespace ArenaGame
 {
     public class Assassian : Hero
     {
-        public const int ChanceToDo300Damage = 30;
+        private const int ChanceToDo300Damage = 30;
 
         public Assassian()
         {
-            HealthPoints = 220;
-            AttackPoints = 190;
-            ArmorPoints = 180;
+            HealthPoints = 250;
+            AttackPoints = 220;
+            ArmorPoints = 200;
         }
 
         public override double Attacking()
         {
             if (GetRandomPercentChance() <= ChanceToDo300Damage)
             {
-                AttackDamage = AttackPoints * (300 / 100);
+                AttackDamage = AttackPoints * 3;
                 return AttackDamage;
             }
             else
@@ -29,7 +29,5 @@ namespace ArenaGame
                 return base.Attacking();
             }
         }
-
-        
     }
 }

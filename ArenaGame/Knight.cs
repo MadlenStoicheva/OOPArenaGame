@@ -8,10 +8,8 @@ namespace ArenaGame
 {
     public class Knight : Hero
     {
-        public const int ChanceToBlockTheAttack = 20;
-        public const int ChanceToDo200Damage = 10;
-
-       // public bool IsBlockingTheAttack { get; set; }
+        private const int ChanceToBlockTheAttack = 20;
+        private const int ChanceToDo200Damage = 10;
 
         public Knight()
         {
@@ -37,9 +35,7 @@ namespace ArenaGame
         {
             if (GetRandomPercentChance() <= ChanceToBlockTheAttack)
             {
-               // IsBlockingTheAttack = true;
-
-                DefendingProtection = ArmorPoints;
+                DefendingProtection = ArmorPoints * 0.2;
                 return DefendingProtection;
             }
             else
@@ -48,5 +44,16 @@ namespace ArenaGame
             }
         }
 
+        //public bool IsAvoidingTheAttack()
+        //{
+        //    if (GetRandomPercentChance() <= ChanceToBlockTheAttack)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
     }
 }

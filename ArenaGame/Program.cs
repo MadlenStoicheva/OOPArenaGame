@@ -19,8 +19,9 @@ namespace ArenaGame
 
 
             GameEngine game = new GameEngine();
-            game.PlayArena(knight, assassian);
+            var result =  game.PlayArena(assassian,monk);
 
+            Console.WriteLine(result);
 
             //GameEngine gameTwo = new GameEngine();
             //gameTwo.PlayArena(assassian, warrior);

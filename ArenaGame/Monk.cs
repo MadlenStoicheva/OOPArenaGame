@@ -8,9 +8,7 @@ namespace ArenaGame
 {
     public class Monk : Hero
     {
-        public const int ChanceToAvoidTheAttack = 30;
-
-        public bool IsBlockingTheAttack { get; set; }
+        private const int ChanceToAvoidTheAttack = 30;
 
         public Monk()
         {
@@ -23,10 +21,8 @@ namespace ArenaGame
         {
             if (GetRandomPercentChance() <= ChanceToAvoidTheAttack)
             {
-                IsBlockingTheAttack = true;
-
-                DefendingProtection = ArmorPoints *  100;
-                return DefendingProtection;
+                //DefendingProtection = ArmorPoints * 0.3;
+                return 0;
             }
             else
             {
@@ -34,5 +30,16 @@ namespace ArenaGame
             }
         }
 
+        public bool IsAvoidingTheAttack()
+        {
+            if (GetRandomPercentChance() <= ChanceToAvoidTheAttack)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

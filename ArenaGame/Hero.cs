@@ -10,9 +10,9 @@ namespace ArenaGame
     {
         private readonly Random randomPercent = new Random();
 
-        public int HealthPoints { get;  set; }
-        protected int AttackPoints { get;  set; }
-        protected int ArmorPoints { get;  set; }
+        public int HealthPoints { get; set; }
+        protected int AttackPoints { get; set; }
+        protected int ArmorPoints { get; set; }
 
         protected double AttackDamage { get; set; }
         protected double DefendingProtection { get; set; }
@@ -29,6 +29,11 @@ namespace ArenaGame
             return DefendingProtection;
         }
 
+        //public virtual bool IsAvoidingTheAttack()
+        //{
+        //    return false;
+        //}
+
         protected double GetRandomPercent()
         {
             return randomPercent.Next(80, 120);
@@ -38,8 +43,5 @@ namespace ArenaGame
         {
             return randomPercent.Next(0, 101);
         }
-
-       
-
     }
 }

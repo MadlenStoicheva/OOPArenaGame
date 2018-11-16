@@ -8,66 +8,83 @@ namespace ArenaGame
 {
     public class GameEngine
     {
-        public void PlayArena(Hero heroOne, Hero heroTwo)
+        int result;
+
+        public string PlayArena(Hero heroOne, Hero heroTwo)
         {
-            int result;
-            
             while (true)
             {
-                
-                int heroOneAttack = (int)heroOne.Attacking();
-                int heroOneDefending = (int)heroOne.Defending();
+                var roundOne = AttackDeffendingMechanism(heroOne, heroTwo);
+                Console.WriteLine(roundOne);
 
-                int heroTwoAttack = (int)heroTwo.Attacking();
-                int heroTwoDefending = (int)heroTwo.Defending();
-
-                if (heroTwoDefending <= heroOneAttack)
+                if (IsHeroDead(heroTwo) == true)
                 {
-                    result = heroOneAttack - heroTwoDefending;
-                    heroTwo.HealthPoints = heroTwo.HealthPoints - result;
-                    Console.WriteLine("Hero two after attack from hero one: " + heroTwo.HealthPoints);
+                    return heroTwo.GetType().Name + " is Dead!";
                 }
-                else
-                {
-                    Console.WriteLine("Attack was blocked!");
-                }
-                 
 
                 Console.WriteLine("**********************");
 
-                if (heroTwo.HealthPoints <= 0)
+                var roundTwo = AttackDeffendingMechanism(heroTwo, heroOne);
+                Console.WriteLine(roundTwo);
+
+                if (IsHeroDead(heroOne) == true)
                 {
-                    Console.WriteLine("Hero two is Dead!");
-                    break;
-
-                }
-                else
-                {
-                    if (heroOneDefending <= heroTwoAttack)
-                    {
-                        result = heroTwoAttack - heroOneDefending;
-                        heroOne.HealthPoints = heroOne.HealthPoints - result;
-                        Console.WriteLine("Hero one after attack from hero two: " + heroOne.HealthPoints);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Attack was blocked!");
-                    }
-
-                }
-
-                if (heroOne.HealthPoints <= 0)
-                {
-                    Console.WriteLine("Hero one is Dead!");
-                    break;
-
+                    return heroOne.GetType().Name + " is Dead!";
                 }
 
                 Console.WriteLine("-----------------------------");
                 Console.WriteLine();
-
             }
         }
 
+        //public bool IsHeroBlockingTheAttack(Hero hero)
+        //{
+        //    if (hero.IsAvoidingTheAttack() == true)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        public string AttackDeffendingMechanism(Hero heroOne, Hero heroTwo)
+        {
+            int heroOneAttack = (int)heroOne.Attacking();
+            int heroTwoDefending = (int)heroTwo.Defending();
+
+            if (heroTwoDefending == 0)
+            {
+                return heroTwo.GetType().Name + " avoid the attack!";
+            }
+            else
+            {
+                if (heroTwoDefending <= heroOneAttack)
+                {
+                    result = heroOneAttack - heroTwoDefending;
+                    heroTwo.HealthPoints = heroTwo.HealthPoints - result;
+
+                    return heroTwo.GetType().Name + " after attack from " + heroOne.GetType().Name + ": " + heroTwo.HealthPoints;
+                }
+                else
+                {
+                    return heroTwo.GetType().Name + " block the attack!";
+                }
+            }
+        }
+
+        public bool IsHeroDead(Hero hero)
+        {
+            if (hero.HealthPoints <= 0)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

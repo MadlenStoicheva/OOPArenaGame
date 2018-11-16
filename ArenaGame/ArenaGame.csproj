@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assassian.cs" />
+    <Compile Include="Dwarf.cs" />
     <Compile Include="GameEngine.cs" />
     <Compile Include="Hero.cs" />
     <Compile Include="Knight.cs" />
