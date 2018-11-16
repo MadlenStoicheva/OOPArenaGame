@@ -11,6 +11,7 @@ namespace ArenaGame
         static void Main(string[] args)
         {
             Console.WriteLine("Let's play a Game in the Arena!");
+            Console.WriteLine();
 
             Knight knight = new Knight();
             Assassian assassian = new Assassian();

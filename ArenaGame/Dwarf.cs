@@ -22,8 +22,7 @@ namespace ArenaGame
         {
             if (GetRandomPercentChance() <= ChanceToDo150Damage)
             {
-                AttackDamage = AttackPoints * 1.5;
-                return AttackDamage;
+                return AttackPoints * 1.5;
             }
             else
             {
