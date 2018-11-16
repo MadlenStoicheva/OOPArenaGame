@@ -21,24 +21,11 @@ namespace ArenaGame
         {
             if (GetRandomPercentChance() <= ChanceToAvoidTheAttack)
             {
-                //DefendingProtection = ArmorPoints * 0.3;
-                return 0;
+                return -1;
             }
             else
             {
                 return base.Defending();
-            }
-        }
-
-        public bool IsAvoidingTheAttack()
-        {
-            if (GetRandomPercentChance() <= ChanceToAvoidTheAttack)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
             }
         }
     }

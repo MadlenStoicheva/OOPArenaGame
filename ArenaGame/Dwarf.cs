@@ -35,13 +35,13 @@ namespace ArenaGame
         {
             if (GetRandomPercentChance() <= ChanceToBlockTheAttack)
             {
-                DefendingProtection = ArmorPoints * 0.15;
-                return DefendingProtection;
+                return -1;
             }
             else
             {
                 return base.Defending();
             }
         }
+
     }
 }

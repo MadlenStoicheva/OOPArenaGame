@@ -8,7 +8,6 @@ namespace ArenaGame
 {
     public class GameEngine
     {
-        int result;
 
         public string PlayArena(Hero heroOne, Hero heroTwo)
         {
@@ -37,40 +36,26 @@ namespace ArenaGame
             }
         }
 
-        //public bool IsHeroBlockingTheAttack(Hero hero)
-        //{
-        //    if (hero.IsAvoidingTheAttack() == true)
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-
         public string AttackDeffendingMechanism(Hero heroOne, Hero heroTwo)
         {
+            int result;
             int heroOneAttack = (int)heroOne.Attacking();
             int heroTwoDefending = (int)heroTwo.Defending();
 
-            if (heroTwoDefending == 0)
+            if (heroTwoDefending == -1)
             {
                 return heroTwo.GetType().Name + " avoid the attack!";
             }
+            else if (heroTwoDefending <= heroOneAttack)
+            {
+                result = heroOneAttack - heroTwoDefending;
+                heroTwo.HealthPoints = heroTwo.HealthPoints - result;
+
+                return heroTwo.GetType().Name + " after attack from " + heroOne.GetType().Name + ": " + heroTwo.HealthPoints;
+            }
             else
             {
-                if (heroTwoDefending <= heroOneAttack)
-                {
-                    result = heroOneAttack - heroTwoDefending;
-                    heroTwo.HealthPoints = heroTwo.HealthPoints - result;
-
-                    return heroTwo.GetType().Name + " after attack from " + heroOne.GetType().Name + ": " + heroTwo.HealthPoints;
-                }
-                else
-                {
-                    return heroTwo.GetType().Name + " block the attack!";
-                }
+                return heroTwo.GetType().Name + " block the attack!";
             }
         }
 
@@ -86,5 +71,6 @@ namespace ArenaGame
                 return false;
             }
         }
+
     }
 }

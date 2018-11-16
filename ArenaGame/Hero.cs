@@ -29,11 +29,6 @@ namespace ArenaGame
             return DefendingProtection;
         }
 
-        //public virtual bool IsAvoidingTheAttack()
-        //{
-        //    return false;
-        //}
-
         protected double GetRandomPercent()
         {
             return randomPercent.Next(80, 120);
