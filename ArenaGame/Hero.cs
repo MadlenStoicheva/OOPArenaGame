@@ -14,7 +14,7 @@ namespace ArenaGame
         protected int AttackPoints { get; set; }
         protected int ArmorPoints { get; set; }
 
-        //public bool IsHeroDead {get;set;}
+        public bool IsHeroDead { get; set; }
 
         public virtual double Attacking()
         {

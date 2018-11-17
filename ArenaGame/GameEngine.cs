@@ -14,14 +14,14 @@ namespace ArenaGame
             {
                 TurnMechanism(heroOne, heroTwo);
 
-                if (heroTwo.HealthPoints <= 0)
+                if (heroTwo.IsHeroDead == true)
                 {
                     return WriteIfHeroDead(heroTwo);
                 }
 
                 TurnMechanism(heroTwo, heroOne);
 
-                if (heroTwo.HealthPoints <= 0)
+                if (heroOne.IsHeroDead == true)
                 {
                     return WriteIfHeroDead(heroOne);
                 }
@@ -32,8 +32,6 @@ namespace ArenaGame
         {
             var roundOne = AttackDeffendingMechanism(heroOne, heroTwo);
             Console.WriteLine(roundOne);
-
-            Console.WriteLine(new string('*', 30));
         }
 
         public string AttackDeffendingMechanism(Hero heroOne, Hero heroTwo)
@@ -48,6 +46,10 @@ namespace ArenaGame
             else if (heroTwoDefending <= heroOneAttack)
             {
                 heroTwo.HealthPoints -= heroOneAttack - heroTwoDefending;
+                if (heroTwo.HealthPoints <= 0)
+                {
+                    heroTwo.IsHeroDead = true;
+                }
                 return heroTwo.GetType().Name + " after attack from " + heroOne.GetType().Name + ": " + heroTwo.HealthPoints;
             }
             else
