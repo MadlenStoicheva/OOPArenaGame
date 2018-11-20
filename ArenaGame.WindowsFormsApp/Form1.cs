@@ -43,8 +43,8 @@ namespace ArenaGame.WindowsFormsApp
                 //MessageBox.Show("You didn't choose hero two!");
             }
 
-            Hero choosenOne = ChosenHero(firstCheckedButton.AccessibleName);
-            Hero choosenSecond = ChosenHero(secondCheckedButton.AccessibleName);
+            //Hero choosenOne = ChosenHero(firstCheckedButton.AccessibleName);
+            //Hero choosenSecond = ChosenHero(secondCheckedButton.AccessibleName);
 
             Form2 form2 = new Form2();
             GameEngine game = new GameEngine();
@@ -67,39 +67,39 @@ namespace ArenaGame.WindowsFormsApp
 
         }
 
-        private Hero ChosenHero(string choosenHero)
-        {
-            if (choosenHero == "Knight")
-            {
-                Knight knightHero = new Knight();
-                return knightHero;
-            }
+        //private Hero ChosenHero(string choosenHero)
+        //{
+            //if (choosenHero == "Knight")
+            //{
+            //    Knight knightHero = new Knight();
+            //    return knightHero;
+            //}
 
-            if (choosenHero == "Assassian")
-            {
-                Assassian assassianHero = new Assassian();
-                return assassianHero;
-            }
+        //    if (choosenHero == "Assassian")
+        //    {
+        //        Assassian assassianHero = new Assassian();
+        //        return assassianHero;
+        //    }
 
-            if (choosenHero == "Dwarf")
-            {
-                Dwarf dwarfHero = new Dwarf();
-                return dwarfHero;
-            }
-            if (choosenHero == "Monk")
-            {
-                Monk monkHero = new Monk();
-                return monkHero;
-            }
+        //    if (choosenHero == "Dwarf")
+        //    {
+        //        Dwarf dwarfHero = new Dwarf();
+        //        return dwarfHero;
+        //    }
+        //    if (choosenHero == "Monk")
+        //    {
+        //        Monk monkHero = new Monk();
+        //        return monkHero;
+        //    }
 
-            if (choosenHero == "Warrior")
-            {
-                Warrior warriorHero = new Warrior();
-                return warriorHero;
-            }
+        //    if (choosenHero == "Warrior")
+        //    {
+        //        Warrior warriorHero = new Warrior();
+        //        return warriorHero;
+        //    }
 
-            return null;
+        //    return null;
             
-        }
+        //}
     }
 }
