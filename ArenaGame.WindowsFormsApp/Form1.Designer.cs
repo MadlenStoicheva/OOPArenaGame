@@ -94,6 +94,7 @@
             // 
             // radioHeroOneKnight
             // 
+            this.radioHeroOneKnight.AccessibleName = "Knight";
             this.radioHeroOneKnight.AutoSize = true;
             this.radioHeroOneKnight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioHeroOneKnight.Location = new System.Drawing.Point(32, 19);
@@ -106,6 +107,7 @@
             // 
             // radioHeroOneAssassian
             // 
+            this.radioHeroOneAssassian.AccessibleName = "Assassian";
             this.radioHeroOneAssassian.AutoSize = true;
             this.radioHeroOneAssassian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioHeroOneAssassian.Location = new System.Drawing.Point(32, 45);
@@ -118,6 +120,7 @@
             // 
             // radioHeroOneDwarf
             // 
+            this.radioHeroOneDwarf.AccessibleName = "Dwarf";
             this.radioHeroOneDwarf.AutoSize = true;
             this.radioHeroOneDwarf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioHeroOneDwarf.Location = new System.Drawing.Point(32, 71);
@@ -130,6 +133,7 @@
             // 
             // radioHeroOneMonk
             // 
+            this.radioHeroOneMonk.AccessibleName = "Monk";
             this.radioHeroOneMonk.AutoSize = true;
             this.radioHeroOneMonk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioHeroOneMonk.Location = new System.Drawing.Point(32, 97);
@@ -142,6 +146,7 @@
             // 
             // radioHeroOneWarrior
             // 
+            this.radioHeroOneWarrior.AccessibleName = "Warrior";
             this.radioHeroOneWarrior.AutoSize = true;
             this.radioHeroOneWarrior.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioHeroOneWarrior.Location = new System.Drawing.Point(32, 123);
@@ -154,6 +159,7 @@
             // 
             // radioHeroTwoWarrior
             // 
+            this.radioHeroTwoWarrior.AccessibleName = "Warrior";
             this.radioHeroTwoWarrior.AutoSize = true;
             this.radioHeroTwoWarrior.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioHeroTwoWarrior.Location = new System.Drawing.Point(38, 123);
@@ -166,6 +172,7 @@
             // 
             // radioHeroTwoMonk
             // 
+            this.radioHeroTwoMonk.AccessibleName = "Monk";
             this.radioHeroTwoMonk.AutoSize = true;
             this.radioHeroTwoMonk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioHeroTwoMonk.Location = new System.Drawing.Point(38, 97);
@@ -178,6 +185,7 @@
             // 
             // radioHeroTwoDwarf
             // 
+            this.radioHeroTwoDwarf.AccessibleName = "Dwarf";
             this.radioHeroTwoDwarf.AutoSize = true;
             this.radioHeroTwoDwarf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioHeroTwoDwarf.Location = new System.Drawing.Point(38, 71);
@@ -190,6 +198,7 @@
             // 
             // radioHeroTwoAssassian
             // 
+            this.radioHeroTwoAssassian.AccessibleName = "Assassian";
             this.radioHeroTwoAssassian.AutoSize = true;
             this.radioHeroTwoAssassian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioHeroTwoAssassian.Location = new System.Drawing.Point(38, 45);
@@ -202,6 +211,7 @@
             // 
             // radioHeroTwoKnight
             // 
+            this.radioHeroTwoKnight.AccessibleName = "Knight";
             this.radioHeroTwoKnight.AutoSize = true;
             this.radioHeroTwoKnight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioHeroTwoKnight.Location = new System.Drawing.Point(38, 19);

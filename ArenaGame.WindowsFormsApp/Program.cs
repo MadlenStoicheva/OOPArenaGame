@@ -14,10 +14,20 @@ namespace ArenaGame.WindowsFormsApp
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Form1());
 
+            }
+            catch (ArgumentException ex)
+            {
+                DialogResult dr = MessageBox.Show(ex.Message,"Please choose hero", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+               
+                //MessageBox.Show(ex.Message);
+                // MessageBox.Show("You didn't choose two heroes!", "Please choose hero",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
+            }
         }
     }
 }

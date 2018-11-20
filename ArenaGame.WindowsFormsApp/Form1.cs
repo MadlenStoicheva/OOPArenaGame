@@ -19,101 +19,38 @@ namespace ArenaGame.WindowsFormsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<Hero> heroes = new List<Hero>();
+            var firstCheckedButton = groupBoxHeroOne.Controls.OfType<RadioButton>()
+                                 .FirstOrDefault(r => r.Checked);
 
-            bool isHeroOneRadioButtonChecked = false;
-            foreach (RadioButton rdo in groupBoxHeroOne.Controls.OfType<RadioButton>())
-            {
-                if (rdo.Checked)
-                {
-                    isHeroOneRadioButtonChecked = true;
+            var secondCheckedButton = groupBoxHeroTwo.Controls.OfType<RadioButton>()
+                                   .FirstOrDefault(r => r.Checked);
 
-                    break;
-                }
-            }
-            if (isHeroOneRadioButtonChecked)
+            if (firstCheckedButton == null && secondCheckedButton == null)
             {
-                if (radioHeroOneKnight.Checked)
-                {
-                    Knight knightHeroOne = new Knight();
-                    heroes.Add(knightHeroOne);
-                }
-                else if (radioHeroOneAssassian.Checked)
-                {
-                    Assassian assassianHeroOne = new Assassian();
-                    heroes.Add(assassianHeroOne);
-                }
-                else if (radioHeroOneDwarf.Checked)
-                {
-                    Dwarf dwarfHeroOne = new Dwarf();
-                    heroes.Add(dwarfHeroOne);
-                }
-                else if (radioHeroOneMonk.Checked)
-                {
-                    Monk monkHeroOne = new Monk();
-                    heroes.Add(monkHeroOne);
-                }
-                else if (radioHeroOneWarrior.Checked)
-                {
-                    Warrior warriorHeroOne = new Warrior();
-                    heroes.Add(warriorHeroOne);
-                }
+                throw new ArgumentException("You didn't choose heroes!");
+                //MessageBox.Show("You didn't choose heroes!");
             }
             else
+            if (firstCheckedButton == null)
             {
-                MessageBox.Show("You didn't choose hero one!");
-                isHeroOneRadioButtonChecked = false;
-            }
-
-            bool isHeroTwoRadioButtonChecked = false;
-            foreach (RadioButton rdo in groupBoxHeroOne.Controls.OfType<RadioButton>())
-            {
-                if (rdo.Checked)
-                {
-                    isHeroTwoRadioButtonChecked = true;
-
-                    break;
-                }
-            }
-            if (isHeroTwoRadioButtonChecked)
-            {
-                if (radioHeroTwoKnight.Checked)
-                {
-                    Knight knightHeroTwo = new Knight();
-                    heroes.Add(knightHeroTwo);
-                }
-                else if (radioHeroTwoAssassian.Checked)
-                {
-                    Assassian assassianHeroTwo = new Assassian();
-                    heroes.Add(assassianHeroTwo);
-                }
-                else if (radioHeroTwoDwarf.Checked)
-                {
-                    Dwarf dwarfHeroTwo = new Dwarf();
-                    heroes.Add(dwarfHeroTwo);
-                }
-                else if (radioHeroTwoMonk.Checked)
-                {
-                    Monk monkHeroTwo = new Monk();
-                    heroes.Add(monkHeroTwo);
-                }
-                else if (radioHeroTwoWarrior.Checked)
-                {
-                    Warrior warriorHeroTwo = new Warrior();
-                    heroes.Add(warriorHeroTwo);
-                }
+                 throw new ArgumentException("You didn't choose hero one!");
+                //MessageBox.Show("You didn't choose hero one!");
             }
             else
+            if (secondCheckedButton == null)
             {
-                MessageBox.Show("You didn't choose hero two!");
-                isHeroTwoRadioButtonChecked = false;
+                throw new ArgumentException("You didn't choose hero two!");
+                //MessageBox.Show("You didn't choose hero two!");
             }
+
+            Hero choosenOne = ChoosenHero(firstCheckedButton.AccessibleName);
+            Hero choosenSecond = ChoosenHero(secondCheckedButton.AccessibleName);
 
             Form2 form2 = new Form2();
             GameEngine game = new GameEngine();
             Print print = new Print(form2);
 
-            game.PlayArena(heroes[0], heroes[1], print);
+            game.PlayArena(choosenOne, choosenSecond, print);
 
             this.Hide();
             form2.ShowDialog();
@@ -128,6 +65,41 @@ namespace ArenaGame.WindowsFormsApp
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private Hero ChoosenHero(string choosenHero)
+        {
+            if (choosenHero == "Knight")
+            {
+                Knight knightHeroOne = new Knight();
+                return knightHeroOne;
+            }
+
+            if (choosenHero == "Assassian")
+            {
+                Assassian assassianHeroOne = new Assassian();
+                return assassianHeroOne;
+            }
+
+            if (choosenHero == "Dwarf")
+            {
+                Dwarf dwarfHeroOne = new Dwarf();
+                return dwarfHeroOne;
+            }
+            if (choosenHero == "Monk")
+            {
+                Monk monkHeroOne = new Monk();
+                return monkHeroOne;
+            }
+
+            if (choosenHero == "Warrior")
+            {
+                Warrior warriorHeroOne = new Warrior();
+                return warriorHeroOne;
+            }
+
+            return null;
+            
         }
     }
 }
