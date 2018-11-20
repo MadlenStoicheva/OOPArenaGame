@@ -18,7 +18,7 @@ namespace ArenaGame
             ArmorPoints = 200;
         }
 
-        public override double Attacking()
+        public override double Attack()
         {
             if (GetRandomPercentChance() <= ChanceToDo200Damage)
             {
@@ -26,11 +26,11 @@ namespace ArenaGame
             }
             else
             {
-                return base.Attacking();
+                return base.Attack();
             }
         }
 
-        public override double Defending()
+        public override double Defence()
         {
             if (GetRandomPercentChance() <= ChanceToBlockTheAttack)
             {
@@ -38,7 +38,7 @@ namespace ArenaGame
             }
             else
             {
-                return base.Defending();
+                return base.Defence();
             }
         }
     }

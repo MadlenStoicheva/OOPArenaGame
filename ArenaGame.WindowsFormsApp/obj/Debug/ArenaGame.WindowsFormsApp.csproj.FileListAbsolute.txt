@@ -1,0 +1,14 @@
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\bin\Debug\ArenaGame.WindowsFormsApp.exe.config
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\bin\Debug\ArenaGame.WindowsFormsApp.exe
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\bin\Debug\ArenaGame.WindowsFormsApp.pdb
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\obj\Debug\ArenaGame.WindowsFormsApp.csprojAssemblyReference.cache
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\obj\Debug\ArenaGame.WindowsFormsApp.Form1.resources
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\obj\Debug\ArenaGame.WindowsFormsApp.Properties.Resources.resources
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\obj\Debug\ArenaGame.WindowsFormsApp.csproj.GenerateResource.cache
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\obj\Debug\ArenaGame.WindowsFormsApp.csproj.CoreCompileInputs.cache
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\obj\Debug\ArenaGame.WindowsFormsApp.exe
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\obj\Debug\ArenaGame.WindowsFormsApp.pdb
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\bin\Debug\ArenaGame.Library.dll
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\bin\Debug\ArenaGame.Library.pdb
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\obj\Debug\ArenaGame.WindowsFormsApp.csproj.CopyComplete
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.WindowsFormsApp\obj\Debug\ArenaGame.WindowsFormsApp.Form2.resources

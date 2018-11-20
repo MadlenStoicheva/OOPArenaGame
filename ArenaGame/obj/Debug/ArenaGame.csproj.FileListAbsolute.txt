@@ -5,3 +5,6 @@ C:\Users\Madlen\source\repos\ArenaGame\ArenaGame\obj\Debug\ArenaGame.csprojAssem
 C:\Users\Madlen\source\repos\ArenaGame\ArenaGame\obj\Debug\ArenaGame.csproj.CoreCompileInputs.cache
 C:\Users\Madlen\source\repos\ArenaGame\ArenaGame\obj\Debug\ArenaGame.exe
 C:\Users\Madlen\source\repos\ArenaGame\ArenaGame\obj\Debug\ArenaGame.pdb
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame\bin\Debug\ArenaGame.Library.dll
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame\bin\Debug\ArenaGame.Library.pdb
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame\obj\Debug\ArenaGame.csproj.CopyComplete

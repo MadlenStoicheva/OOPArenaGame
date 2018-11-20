@@ -1,0 +1,6 @@
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.Library\bin\Debug\ArenaGame.Library.dll
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.Library\bin\Debug\ArenaGame.Library.pdb
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.Library\obj\Debug\ArenaGame.Library.csproj.CoreCompileInputs.cache
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.Library\obj\Debug\ArenaGame.Library.dll
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.Library\obj\Debug\ArenaGame.Library.pdb
+C:\Users\Madlen\source\repos\ArenaGame\ArenaGame.Library\obj\Debug\ArenaGame.Library.csprojAssemblyReference.cache

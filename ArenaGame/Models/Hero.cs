@@ -13,16 +13,15 @@ namespace ArenaGame
         public int HealthPoints { get; set; }
         protected int AttackPoints { get; set; }
         protected int ArmorPoints { get; set; }
-
         public bool IsHeroDead { get; set; }
 
-        public virtual double Attacking()
+        public virtual double Attack()
         {
             var attackDamage = AttackPoints * (GetRandomPercent() / 100);
             return attackDamage;
         }
 
-        public virtual double Defending()
+        public virtual double Defence()
         {
             var defendingProtection = ArmorPoints * (GetRandomPercent() / 100);
             return defendingProtection;

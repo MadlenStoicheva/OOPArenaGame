@@ -21,9 +21,14 @@ namespace ArenaGame
 
 
             GameEngine game = new GameEngine();
-            var result = game.PlayArena(knight,dwarf);
+            var result = game.PlayArena(knight, dwarf);
 
-            Console.WriteLine(result);
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+
+            }
+
 
             //GameEngine gameTwo = new GameEngine();
             //gameTwo.PlayArena(assassian, warrior);

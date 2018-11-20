@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ArenaGame.Library.Engine.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,36 +9,45 @@ namespace ArenaGame
 {
     public class GameEngine
     {
-        public string PlayArena(Hero heroOne, Hero heroTwo)
+        //private GameEngine(IPrint print)
+        //{
+
+        //}
+
+        public List<string> PlayArena(Hero heroOne, Hero heroTwo)
         {
+            List<string> result = new List<string>();
             while (true)
             {
-                TurnMechanism(heroOne, heroTwo);
+                result.Add(TurnMechanism(heroOne, heroTwo));
 
                 if (heroTwo.IsHeroDead == true)
                 {
-                    return WriteIfHeroDead(heroTwo);
+                    result.Add(WriteIfHeroDead(heroTwo));
+                    return result;
                 }
 
-                TurnMechanism(heroTwo, heroOne);
+                result.Add(TurnMechanism(heroTwo, heroOne));
 
                 if (heroOne.IsHeroDead == true)
                 {
-                    return WriteIfHeroDead(heroOne);
+                    result.Add( WriteIfHeroDead(heroOne));
+                    return result;
                 }
             }
         }
 
-        public void TurnMechanism(Hero heroOne, Hero heroTwo)
+        public string TurnMechanism(Hero heroOne, Hero heroTwo)
         {
             var roundOne = AttackDeffendingMechanism(heroOne, heroTwo);
-            Console.WriteLine(roundOne);
+            //Console.WriteLine(roundOne);
+            return roundOne;
         }
 
         public string AttackDeffendingMechanism(Hero heroOne, Hero heroTwo)
         {
-            int heroOneAttack = (int)heroOne.Attacking();
-            int heroTwoDefending = (int)heroTwo.Defending();
+            int heroOneAttack = (int)heroOne.Attack();
+            int heroTwoDefending = (int)heroTwo.Defence();
 
             if (heroTwoDefending == -1)
             {
