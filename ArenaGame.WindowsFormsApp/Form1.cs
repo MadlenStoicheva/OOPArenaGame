@@ -43,8 +43,8 @@ namespace ArenaGame.WindowsFormsApp
                 //MessageBox.Show("You didn't choose hero two!");
             }
 
-            Hero choosenOne = ChoosenHero(firstCheckedButton.AccessibleName);
-            Hero choosenSecond = ChoosenHero(secondCheckedButton.AccessibleName);
+            Hero choosenOne = ChosenHero(firstCheckedButton.AccessibleName);
+            Hero choosenSecond = ChosenHero(secondCheckedButton.AccessibleName);
 
             Form2 form2 = new Form2();
             GameEngine game = new GameEngine();
@@ -67,35 +67,35 @@ namespace ArenaGame.WindowsFormsApp
 
         }
 
-        private Hero ChoosenHero(string choosenHero)
+        private Hero ChosenHero(string choosenHero)
         {
             if (choosenHero == "Knight")
             {
-                Knight knightHeroOne = new Knight();
-                return knightHeroOne;
+                Knight knightHero = new Knight();
+                return knightHero;
             }
 
             if (choosenHero == "Assassian")
             {
-                Assassian assassianHeroOne = new Assassian();
-                return assassianHeroOne;
+                Assassian assassianHero = new Assassian();
+                return assassianHero;
             }
 
             if (choosenHero == "Dwarf")
             {
-                Dwarf dwarfHeroOne = new Dwarf();
-                return dwarfHeroOne;
+                Dwarf dwarfHero = new Dwarf();
+                return dwarfHero;
             }
             if (choosenHero == "Monk")
             {
-                Monk monkHeroOne = new Monk();
-                return monkHeroOne;
+                Monk monkHero = new Monk();
+                return monkHero;
             }
 
             if (choosenHero == "Warrior")
             {
-                Warrior warriorHeroOne = new Warrior();
-                return warriorHeroOne;
+                Warrior warriorHero = new Warrior();
+                return warriorHero;
             }
 
             return null;
