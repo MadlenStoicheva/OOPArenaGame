@@ -24,9 +24,6 @@ namespace ArenaGame.WindowsFormsApp
             catch (ArgumentException ex)
             {
                 DialogResult dr = MessageBox.Show(ex.Message,"Please choose hero", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-               
-                //MessageBox.Show(ex.Message);
-                // MessageBox.Show("You didn't choose two heroes!", "Please choose hero",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
             }
         }
     }

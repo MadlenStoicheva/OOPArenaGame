@@ -28,9 +28,7 @@ namespace ArenaGame.WindowsFormsApp
 
         private void button_PlayAgain_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 form1 = new Form1();
-            form1.ShowDialog();
+            this.Close();
         }
 
     }
