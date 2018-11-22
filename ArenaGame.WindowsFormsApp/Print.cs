@@ -10,15 +10,15 @@ namespace ArenaGame.WindowsFormsApp
 {
     public class Print : IPrint
     {
-        Form2 form2;
+        //Form2 form2;
         private ListBox lstBox = new ListBox();
 
-        public Print(Form2 form2)
+        public Print(ListBox lstBox)
         {
-            this.form2 = form2;
-            form2.Controls.Add(lstBox);
-            this.lstBox.Location = new System.Drawing.Point(250, 85);
-            this.lstBox.Size = new System.Drawing.Size(330, 195);
+            this.lstBox = lstBox;
+          //  form2.Controls.Add(lstBox);
+           // this.lstBox.Location = new System.Drawing.Point(250, 85);
+           // this.lstBox.Size = new System.Drawing.Size(330, 195);
         }
 
         public void PrintIfHeroIsDead(string message)

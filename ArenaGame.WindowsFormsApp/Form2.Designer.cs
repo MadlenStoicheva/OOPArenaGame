@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_PlayAgain = new System.Windows.Forms.Button();
+            this.listBox_HeroesFight = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -42,27 +43,35 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Heroes Fight";
             // 
-            // button1
+            // button_PlayAgain
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(256, 349);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(325, 45);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "PLAY AGAIN";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_PlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_PlayAgain.Location = new System.Drawing.Point(256, 349);
+            this.button_PlayAgain.Name = "button_PlayAgain";
+            this.button_PlayAgain.Size = new System.Drawing.Size(325, 45);
+            this.button_PlayAgain.TabIndex = 2;
+            this.button_PlayAgain.Text = "PLAY AGAIN";
+            this.button_PlayAgain.UseVisualStyleBackColor = true;
+            this.button_PlayAgain.Click += new System.EventHandler(this.button_PlayAgain_Click);
+            // 
+            // listBox_HeroesFight
+            // 
+            this.listBox_HeroesFight.FormattingEnabled = true;
+            this.listBox_HeroesFight.Location = new System.Drawing.Point(222, 72);
+            this.listBox_HeroesFight.Name = "listBox_HeroesFight";
+            this.listBox_HeroesFight.Size = new System.Drawing.Size(385, 251);
+            this.listBox_HeroesFight.TabIndex = 3;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listBox_HeroesFight);
+            this.Controls.Add(this.button_PlayAgain);
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,6 +79,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_PlayAgain;
+        private System.Windows.Forms.ListBox listBox_HeroesFight;
     }
 }

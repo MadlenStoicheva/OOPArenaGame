@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbHeader = new System.Windows.Forms.Label();
+            this.button_Play = new System.Windows.Forms.Button();
+            this.lbChooseHeroTwo = new System.Windows.Forms.Label();
+            this.lbChooseHeroOne = new System.Windows.Forms.Label();
             this.radioHeroOneKnight = new System.Windows.Forms.RadioButton();
             this.radioHeroOneAssassian = new System.Windows.Forms.RadioButton();
             this.radioHeroOneDwarf = new System.Windows.Forms.RadioButton();
@@ -48,49 +48,48 @@
             this.groupBoxHeroOne.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lbHeader
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(262, 41);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(321, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hello to the Arena!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbHeader.AutoSize = true;
+            this.lbHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbHeader.Location = new System.Drawing.Point(262, 41);
+            this.lbHeader.Name = "lbHeader";
+            this.lbHeader.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbHeader.Size = new System.Drawing.Size(321, 39);
+            this.lbHeader.TabIndex = 0;
+            this.lbHeader.Text = "Hello to the Arena!";
+            this.lbHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button1
+            // button_Play
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(296, 315);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(209, 57);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "PLAY";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_Play.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_Play.Location = new System.Drawing.Point(296, 315);
+            this.button_Play.Name = "button_Play";
+            this.button_Play.Size = new System.Drawing.Size(209, 57);
+            this.button_Play.TabIndex = 1;
+            this.button_Play.Text = "PLAY";
+            this.button_Play.UseVisualStyleBackColor = true;
+            this.button_Play.Click += new System.EventHandler(this.button_Play_Click);
             // 
-            // label2
+            // lbChooseHeroTwo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(542, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Choose hero two";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lbChooseHeroTwo.AutoSize = true;
+            this.lbChooseHeroTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbChooseHeroTwo.Location = new System.Drawing.Point(542, 114);
+            this.lbChooseHeroTwo.Name = "lbChooseHeroTwo";
+            this.lbChooseHeroTwo.Size = new System.Drawing.Size(174, 25);
+            this.lbChooseHeroTwo.TabIndex = 2;
+            this.lbChooseHeroTwo.Text = "Choose hero two";
             // 
-            // label3
+            // lbChooseHeroOne
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(118, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Choose hero one";
+            this.lbChooseHeroOne.AutoSize = true;
+            this.lbChooseHeroOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbChooseHeroOne.Location = new System.Drawing.Point(118, 112);
+            this.lbChooseHeroOne.Name = "lbChooseHeroOne";
+            this.lbChooseHeroOne.Size = new System.Drawing.Size(177, 25);
+            this.lbChooseHeroOne.TabIndex = 3;
+            this.lbChooseHeroOne.Text = "Choose hero one";
             // 
             // radioHeroOneKnight
             // 
@@ -235,7 +234,6 @@
             this.groupBoxHeroTwo.TabIndex = 14;
             this.groupBoxHeroTwo.TabStop = false;
             this.groupBoxHeroTwo.Text = "Hero Two";
-            this.groupBoxHeroTwo.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBoxHeroOne
             // 
@@ -258,10 +256,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBoxHeroOne);
             this.Controls.Add(this.groupBoxHeroTwo);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbChooseHeroOne);
+            this.Controls.Add(this.lbChooseHeroTwo);
+            this.Controls.Add(this.button_Play);
+            this.Controls.Add(this.lbHeader);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBoxHeroTwo.ResumeLayout(false);
@@ -275,10 +273,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbHeader;
+        private System.Windows.Forms.Button button_Play;
+        private System.Windows.Forms.Label lbChooseHeroTwo;
+        private System.Windows.Forms.Label lbChooseHeroOne;
         private System.Windows.Forms.RadioButton radioHeroOneKnight;
         private System.Windows.Forms.RadioButton radioHeroOneAssassian;
         private System.Windows.Forms.RadioButton radioHeroOneDwarf;

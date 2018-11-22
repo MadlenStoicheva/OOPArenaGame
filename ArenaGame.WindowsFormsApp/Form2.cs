@@ -12,21 +12,26 @@ namespace ArenaGame.WindowsFormsApp
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        private Hero FirstHero { get; set; }
+        private Hero SecondHero { get; set; }
+
+        public Form2(Hero heroOne, Hero secondHero)
         {
             InitializeComponent();
+
+            FirstHero = heroOne;
+            SecondHero = secondHero;
+            GameEngine game = new GameEngine();
+            Print print = new Print(listBox_HeroesFight);
+            game.PlayArena(FirstHero, SecondHero, print);
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button_PlayAgain_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 form1 = new Form1();
             form1.ShowDialog();
         }
+
     }
 }
